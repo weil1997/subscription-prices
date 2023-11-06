@@ -1,0 +1,200 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.pricing-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Arial", sans-serif;
+  padding: 50px 0;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.toggle-container {
+  display: flex;
+
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem; /* Adjust as needed for space between "Our pricing" and the toggle */
+}
+
+.toggle-container > div {
+  margin-top: 4rem;
+}
+
+h1 {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translate(-50%);
+  margin: 0;
+}
+
+.toggle span:first-child {
+  margin-right: 10px; /* Lägg till detta för att ge lite utrymme till vänster om knappen */
+}
+
+.toggle span:last-child {
+  margin-left: 10px; /* Lägg till detta för att ge lite utrymme till höger om knappen */
+}
+
+.toggle {
+  display: flex;
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.toggle span {
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.toggle span.active {
+  opacity: 1;
+}
+
+.toggle button {
+  width: 50px; /* adjust to match your design */
+  height: 25px; /* adjust to match your design */
+  border: none;
+  border-radius: 12px; /* half of the height to create a pill shape */
+  background-color: #ddd; /* example background color, adjust to match your design */
+  position: relative; /* will be used to position the circle inside */
+  cursor: pointer;
+  outline: none; /* removes the default outline */
+  background-color: #686cb7;
+}
+
+.toggle span {
+  cursor: pointer;
+}
+
+.toggle button::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  background-color: white;
+  transition: left 0.3s ease;
+}
+
+.toggle button.annually::before {
+  left: 2px;
+}
+
+.toggle button.monthly::before {
+  left: 27px;
+}
+
+.dark-gray-text {
+  color: #2b2b2b;
+}
+
+.plans {
+  display: flex;
+  gap: -30px;
+  height: 500px;
+  max-width: 95vw;
+  justify-content: center;
+}
+
+.plans .plan {
+  max-width: 300px;
+  box-sizing: border-box;
+}
+
+.plan.highlighted {
+  background-color: #686cb7;
+  color: #fff;
+  z-index: 5;
+}
+
+.plan {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 10 15px rgba(0, 0, 0, 0.2);
+  width: 350px;
+  background-color: #fff;
+  height: 100%;
+  justify-content: space-between;
+  z-index: 1;
+  border: 1px solid #e0e0e0;
+}
+
+.plan h2 {
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.plan h3 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+.plan p {
+  margin-bottom: 5px;
+  margin-bottom: 5px;
+  font-size: 1.1rem;
+}
+
+.plan.professional {
+  background-color: #7b7fda;
+  color: white;
+}
+
+.plan.plan.professional button:hover {
+  background-color: #fff;
+}
+
+.plan h2,
+.plan h3,
+.plan p {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.plan p:last-child {
+  border-bottom: none;
+}
+.plan button {
+  margin-top: 20px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+
+  color: #7b7fda;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  margin-top: 5px;
+}
+
+.plan button:hover {
+  background-color: #686cb7;
+  color: #fff;
+}
+
+.toggle.anually button {
+  background-color: #7b7fda;
+}
+
+.toggle.monthly button {
+  background-color: #ddd;
+}
